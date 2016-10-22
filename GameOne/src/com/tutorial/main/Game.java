@@ -17,14 +17,16 @@ public class Game extends Canvas implements Runnable{
     private boolean running = false;
     
     private Handler handler;
-    private Random r = new Random();;
+    private Random r;
     
     public Game (){
-        new Window(WIDTH,HEIGHT,"My First Java Game",this);
         handler = new Handler();
-        for(int i = 0; i <50; i++){
-            handler.addObject(new Player(r.nextInt(WIDTH),r.nextInt(HEIGHT),ID.Player));
-        }
+        
+        new Window(WIDTH,HEIGHT,"My First Java Game",this);
+        
+        r = new Random();
+        
+        handler.addObject(new Player(r.nextInt(WIDTH),r.nextInt(HEIGHT),ID.Player));
     }
     
     public synchronized void start(){
