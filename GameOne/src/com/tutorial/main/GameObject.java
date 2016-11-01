@@ -2,10 +2,6 @@ package com.tutorial.main;
 
 import java.awt.Graphics;
 
-/**
- *
- * @author travbot5000
- */
 public abstract class GameObject {
     
     protected int x, y;

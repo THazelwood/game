@@ -4,10 +4,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Random;
 
-/**
- *
- * @author travbot5000
- */
 public class Player extends GameObject {
     private Random r = new Random();
     public Player(int x, int y, ID id){
