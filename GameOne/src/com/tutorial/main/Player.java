@@ -12,23 +12,18 @@ public class Player extends GameObject {
     private Random r = new Random();
     public Player(int x, int y, ID id){
         super(x,y,id);
-        
-        //velX = r.nextInt(5) + 1;
-        //velY = r.nextInt(5);
     }
     
     public void tick(){
         x += velX;
         y += velY;
-        
-        
-        if(y <= 0 || y >+ Game.HEIGHT - 32) velY *= 0;
-        if(x <= 0 || x >+ Game.HEIGHT - 16) velX *= 0;
+       
+        x = Game.clamp(x, 0, Game.WIDTH - 35);
+        y = Game.clamp(y, 0, Game.HEIGHT - 60);
     }
     
     public void render(Graphics g){
         g.setColor(Color.white);
         g.fillRect(x, y, 32, 32);
-    }
-    
+    }  
 }
