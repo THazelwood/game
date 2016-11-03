@@ -20,18 +20,34 @@ public class Spawn {
         if(scoreKeep >= 300){
             scoreKeep = 0;
             hud.setLevel(hud.getLevel() + 1);
-            if(hud.getLevel() == 2){
-                handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.BasicEnemy, handler));
+            switch(hud.getLevel()) {
+                case 2: handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.BasicEnemy, handler));
+                        break;
+                case 3: handler.addObject(new VerticalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.VerticalEnemy, handler));
+                        break;
+                case 4: handler.addObject(new HorizontalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.HorizontalEnemy, handler));
+                        break;
+                case 5: handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.FastEnemy, handler));
+                        break;
+                default: handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.FastEnemy, handler));
+                        break;
             }
-            else if(hud.getLevel() == 3){
-                handler.addObject(new VerticalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.VerticalEnemy, handler));
-            }
-            else if(hud.getLevel() == 4){
-                handler.addObject(new HorizontalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.HorizontalEnemy, handler));
-            }
-            else if(hud.getLevel() == 5){
-                handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.FastEnemy, handler));
-            }
+            
+            
+            
+            
+//            if(hud.getLevel() == 2){
+//                handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.BasicEnemy, handler));
+//            }
+//            else if(hud.getLevel() == 3){
+//                handler.addObject(new VerticalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.VerticalEnemy, handler));
+//            }
+//            else if(hud.getLevel() == 4){
+//                handler.addObject(new HorizontalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.HorizontalEnemy, handler));
+//            }
+//            else if(hud.getLevel() == 5){
+//                handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.FastEnemy, handler));
+//            }
         }
     }
 }
