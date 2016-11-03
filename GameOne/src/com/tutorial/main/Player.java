@@ -26,6 +26,8 @@ public class Player extends GameObject {
         x = Game.clamp(x, 0, Game.WIDTH - 35);
         y = Game.clamp(y, 0, Game.HEIGHT - 60);
         
+        handler.addObject(new Trail(x,y,ID.Trail,Color.white, 32,32, (float) 0.1, handler));
+        
         collision();
     }
     
@@ -35,7 +37,7 @@ public class Player extends GameObject {
             
             if(tempObject.getID() == ID.BasicEnemy){
                 if(getBounds().intersects(tempObject.getBounds())){
-                    HUD.HEALTH -= 2;
+                    HUD.HEALTH -= 5;
                 }
             }
         }
