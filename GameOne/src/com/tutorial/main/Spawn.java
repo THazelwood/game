@@ -32,22 +32,6 @@ public class Spawn {
                 default: handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.FastEnemy, handler));
                         break;
             }
-            
-            
-            
-            
-//            if(hud.getLevel() == 2){
-//                handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.BasicEnemy, handler));
-//            }
-//            else if(hud.getLevel() == 3){
-//                handler.addObject(new VerticalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.VerticalEnemy, handler));
-//            }
-//            else if(hud.getLevel() == 4){
-//                handler.addObject(new HorizontalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.HorizontalEnemy, handler));
-//            }
-//            else if(hud.getLevel() == 5){
-//                handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.FastEnemy, handler));
-//            }
         }
     }
 }
