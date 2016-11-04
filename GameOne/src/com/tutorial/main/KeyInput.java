@@ -40,7 +40,6 @@ public class KeyInput extends KeyAdapter{
                 if(key == KeyEvent.VK_S) keyDown[1] = false;
                 if(key == KeyEvent.VK_A) keyDown[2] = false;
                 if(key == KeyEvent.VK_D) keyDown[3] = false;
-                
                 //vertical movement
                 if(!keyDown[0] && !keyDown[1]) tempObject.setVelY(0);
                 //horizontal movement

@@ -8,7 +8,7 @@ public class VerticalEnemy extends GameObject{
 
     private Handler handler;
     
-    public VerticalEnemy(int x, int y, ID id, Handler handler) {
+    public VerticalEnemy(float x, float y, ID id, Handler handler) {
         super(x, y, id);
         velX = 2;
         velY = 9;
@@ -16,7 +16,7 @@ public class VerticalEnemy extends GameObject{
     }
     
     public Rectangle getBounds() {
-       return new Rectangle(x,y,16,16);
+       return new Rectangle((int)x,(int)y,16,16);
     }
 
     public void tick() {
@@ -31,6 +31,6 @@ public class VerticalEnemy extends GameObject{
 
     public void render(Graphics g) { 
         g.setColor(Color.cyan);
-        g.fillRect(x, y, 16, 16);
+        g.fillRect((int)x, (int)y, 16, 16);
     } 
 }
