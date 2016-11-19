@@ -3,16 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/SmartEnemy.java</file>
             <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/Handler.java</file>
             <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/GameObject.java</file>
             <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/KeyInput.java</file>
-            <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/Player.java</file>
             <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/Spawn.java</file>
+            <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/Player.java</file>
             <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/HUD.java</file>
             <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/ID.java</file>
-            <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/BasicEnemy.java</file>
             <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/Trail.java</file>
             <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/Game.java</file>
+            <file>file:/C:/Users/Travis/Documents/GitHub/game/GameOne/src/com/tutorial/main/HorizontalEnemy.java</file>
         </group>
     </open-files>
 </project-private>
