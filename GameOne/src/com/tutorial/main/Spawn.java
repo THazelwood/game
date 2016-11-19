@@ -26,17 +26,17 @@ public class Spawn {
                         break;
                 case 4: handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.FastEnemy, handler));
                         break;
-                case 5: handler.addObject(new SmartEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.SmartEnemy, handler));
-                        break;
-                case 6: handler.addObject(new HorizontalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.HorizontalEnemy, handler));
-                        break;
-                case 7: handler.addObject(new VerticalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.VerticalEnemy, handler));
-                        break;
-                case 8: handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.FastEnemy, handler));
-                        break;
-                case 9: handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.BasicEnemy, handler));
-                        break;
-                case 10: 
+//                case 5: handler.addObject(new SmartEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.SmartEnemy, handler));
+//                        break;
+//                case 6: handler.addObject(new HorizontalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.HorizontalEnemy, handler));
+//                        break;
+//                case 7: handler.addObject(new VerticalEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.VerticalEnemy, handler));
+//                        break;
+//                case 8: handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.FastEnemy, handler));
+//                        break;
+//                case 9: handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50),r.nextInt(Game.HEIGHT - 50),ID.BasicEnemy, handler));
+//                        break;
+                case 5: 
                     handler.clearEnemys();
                     handler.addObject(new EnemyBossOne((Game.WIDTH / 2)-48,-150,ID.EnemyBossOne, handler));
                         break;

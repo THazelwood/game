@@ -14,10 +14,12 @@ import java.util.Random;
      private Game game;
      private Handler handler;
      private Random r = new Random();
+     private HUD hud;
      
-     public Menu(Game game, Handler handler){
+     public Menu(Game game, Handler handler, HUD hud){
          this.game = game;
          this.handler = handler;
+         this.hud = hud;
      }
      
     public void mousePressed(MouseEvent e){
@@ -30,7 +32,9 @@ import java.util.Random;
             if(mouseOver(mx, my, 210, 150, 200, 64)){
                 game.gameState = STATE.Game;
                 handler.addObject(new Player(WIDTH/2-32,HEIGHT/2-32,ID.Player, handler));
+                handler.clearEnemys();
                 handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH -50),r.nextInt(Game.HEIGHT -50),ID.BasicEnemy, handler));
+                
             }
             //help button
             if(mouseOver(mx, my, 210, 250, 200, 64)){
@@ -46,6 +50,15 @@ import java.util.Random;
         if(game.gameState == STATE.Help){
             if(mouseOver(mx, my, 210, 350, 200, 64)){
                 game.gameState = STATE.Menu;
+                return;
+            }
+        }
+           //back button for endgame
+        if(game.gameState == STATE.End){
+            if(mouseOver(mx, my, 210, 350, 200, 64)){
+                game.gameState = STATE.Menu;
+                hud.setLevel(1);
+                hud.setScore(0);
                 return;
             }
         }
@@ -101,6 +114,21 @@ import java.util.Random;
             g.drawRect(210, 350, 200, 64);
             g.setFont(fnt2);
             g.drawString("Back", 270, 390);
+        }else if(game.gameState == STATE.End){
+            Font fnt = new Font("arial", 1, 50);
+            Font fnt2 = new Font("arial", 1, 30);
+            Font fnt3 = new Font("arial", 1, 20);
+            
+            g.setFont(fnt);
+            g.setColor(Color.white);
+            g.drawString("GAME OVER", 150, 70);
+            
+            g.setFont(fnt3);
+            g.drawString("You lost with a score of: " + hud.getScore(),180, 200);
+            
+            g.drawRect(210, 350, 200, 64);
+            g.setFont(fnt2);
+            g.drawString("Try Again", 240, 390);
         }
      }
     
